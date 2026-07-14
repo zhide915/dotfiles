@@ -1,0 +1,18 @@
+{
+  "agents": {
+    "claude": {
+      "repoDir": "claude",
+      "targetDir": "~/.claude",
+      "instructions": {
+        "from": "instructions.md",
+        "to": "CLAUDE.md"
+      },
+      "sync": [
+        "settings.json",
+        "agents",
+        "skills",
+        "hooks"
+      ]
+    }
+  }
+}
