@@ -1,0 +1,10 @@
+# secrets
+.env
+*.local.env
+
+# machine-local overrides
+**/settings.local.json
+
+# OS noise
+.DS_Store
+Thumbs.db
