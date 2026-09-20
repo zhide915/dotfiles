@@ -43,7 +43,7 @@ test('a real file at the live path is blocked', () => {
   } finally { teardown(root); }
 });
 
-test('a link to a different file, or to nothing, is blocked', () => {
+test('a link to a different file, or a dangling link, is blocked', () => {
   const { root, repoRoot, home } = setup({ '.bashrc': 'export A=1', '.profile': 'x' });
   try {
     const other = path.join(root, 'other.bashrc');

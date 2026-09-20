@@ -13,8 +13,8 @@ Each live path on this machine is a link to its managed file under `home/`.
   effect as it is saved, including in the session making the edit.
 - **Public**: tools write to their managed files through the links, and a push
   publishes what they wrote.
-- To move, rename, or delete a managed file, delete the live link first. In
-  the other order, a broken link stays at the old live path.
+- To move, rename, or delete a managed file, delete its link first. In
+  the other order, a dangling link stays at the old live path.
 
 Done when: before saving a file, you can say whether it is a managed file and
 which tool reads it. Before a commit, you have read every hunk of the `home/`
@@ -30,7 +30,7 @@ keep.
 ## Changing `bin/`: create-only
 
 The scripts are **create-only**: they create what is missing and report the
-rest. A blocked file is left for the user to clear, because a real file at a
+rest. A blocked file is left for the user to unblock, because a real file at a
 live path can be the only copy of its content. Keep every change create-only.
 
 - Link leaf files only. A linked directory hands every file a tool writes

@@ -44,8 +44,7 @@ To add a managed file, move the file into `home/`, at the same path that it
 has under `~`, and then run `node bin/link.js`.
 
 To remove a managed file, delete the link at the live path first, and then
-delete the managed file. In the other order, the link stays and points to
-nothing.
+delete the managed file. In the other order, a dangling link stays.
 
 ## Test
 

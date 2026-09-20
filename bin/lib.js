@@ -40,7 +40,7 @@ function classify(repoRoot, home, file) {
     return { file, state: 'blocked', reason: `real ${st.isDirectory() ? 'directory' : 'file'} at ${live}` };
   }
   // The native realpath gives the true letter case on Windows. It throws on a
-  // link to nothing, which is a wrong link too.
+  // dangling link, which is a wrong link too.
   let resolved = null;
   try { resolved = fs.realpathSync.native(live); } catch (e) {}
   if (resolved === fs.realpathSync.native(managed)) return { file, state: 'linked' };
