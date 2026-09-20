@@ -1,40 +1,47 @@
-# dotfiles
+# Context
 
-The personal configuration files of one machine, kept in one repository and
-linked into the locations where each tool reads them.
+This file defines the terms of this repository. Each definition uses only the
+terms above it.
 
 ## Language
 
 **Home tree**:
-The `home/` directory, whose structure is a mirror of the user's home directory.
-_Avoid_: Manifest, mirror directory
+The `home/` directory: a mirror of `~`.
+_Avoid_: Home directory (`~`)
 
 **Managed file**:
-A file in the home tree: the one real copy of a configuration file's content.
-_Avoid_: Entry, source
+A file in the home tree: a tool's configuration.
+_Avoid_: Source
 
 **Live path**:
-The path where a tool reads a managed file: the managed file's path with the
-home tree replaced by the user's home directory.
+The managed file's path, mirrored under `~`: where its tool reads it.
 _Avoid_: Target, destination
 
+**Link**:
+A symbolic link. The correct link runs from a live path to its managed file.
+_Avoid_: Symlink
+
+**Dangling link**:
+A link that resolves to nothing.
+_Avoid_: Broken link
+
 **Prerequisite**:
-A tool that a managed file needs and that the user installs by hand.
+A tool that this repository needs, installed by hand.
 _Avoid_: Dependency
 
-## States of a managed file
+## States
 
-Every managed file is in exactly one state.
+A state describes a managed file. Missing and blocked also describe anything
+else that the scripts check, such as a prerequisite.
 
 **Linked**:
-The live path is a link that resolves to the managed file.
+The correct link is at the live path.
 _Avoid_: Synced, deployed
 
 **Missing**:
-Nothing exists at the live path.
+Nothing is at the live path.
 _Avoid_: Unlinked
 
 **Blocked**:
-Something other than the correct link is at the live path, or something other
-than a real directory is above it.
+Something else is at the live path, or above it.
 _Avoid_: Conflict

@@ -20,7 +20,7 @@ test('link creates a file link, and real parent directories, for a missing file'
   } finally { teardown(root); }
 });
 
-test('link leaves a blocked file untouched and still links the others', () => {
+test('link leaves a blocking file untouched and still links the others', () => {
   const { root, repoRoot, home } = setup({ '.bashrc': 'managed', '.profile': 'managed', '.zshrc': 'managed' });
   try {
     fs.writeFileSync(path.join(home, '.bashrc'), 'only copy');

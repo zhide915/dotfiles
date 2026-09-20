@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Invariant: only creates. A blocked file is left alone, because it can be the
-// only copy of its content.
+// Invariant: only creates. A blocking file is left alone, because it can be
+// the only copy of its content.
 'use strict';
 
 const fs = require('fs');
