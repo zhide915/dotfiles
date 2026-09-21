@@ -1,7 +1,6 @@
 # Context
 
-This file defines the terms of this repository. Each definition uses only the
-terms above it.
+This file defines the terms of this repository. Each definition uses only the terms above it.
 
 ## Language
 
@@ -31,8 +30,7 @@ _Avoid_: Dependency
 
 ## States
 
-A state describes a managed file. Missing and blocked also describe anything
-else that the scripts check, such as a prerequisite.
+A state describes a managed file. Missing and blocked also describe anything else that the scripts check, such as a prerequisite.
 
 **Linked**:
 The correct link is at the live path.
