@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
   "attribution": {
     "commit": "",
     "pr": "",
@@ -30,6 +33,7 @@
   },
   "outputStyle": "Concise",
   "feedbackDrafts": "off",
+  "autoCompactWindow": 400000,
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
