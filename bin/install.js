@@ -8,7 +8,7 @@ const { describe, MACHINE } = require('./lib.js');
 const { link } = require('./link.js');
 const { status } = require('./status.js');
 
-const PREREQUISITES = ['git', 'node', 'go', 'fnm', 'claude'];
+const PREREQUISITES = ['git', 'node', 'go', 'fnm', 'herdr-app', 'claude'];
 const FOOTLIGHT = 'github.com/zhide915/footlight@latest';
 
 // `where` searches the current directory before PATH, so run it from bin/,
