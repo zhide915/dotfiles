@@ -6,15 +6,13 @@ The `home/` directory is the home tree: each file in it is a managed file, linke
 
 ## Set up
 
-1. Install Git, Node.js, Go, fnm, herdr, and Claude Code.
+1. Install Git, Node.js, Go, fnm, and Claude Code.
 1. On Windows, turn on Developer Mode or use an elevated shell, so that the script can create links.
 1. Clone this repository, and run the following command in its root directory:
 
    ```sh
    node bin/install.js
    ```
-
-1. If the script sets `HERDR_CONFIG_PATH`, restart herdr.
 
 The script changes only what needs to change, so you can run it again at any time.
 

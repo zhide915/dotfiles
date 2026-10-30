@@ -32,6 +32,6 @@ This file holds the **global** instructions of the user, for each project on thi
 The scripts are **create-only**: they create what is missing, and report the rest. A blocked managed file stays for the user to unblock, because a real file at a live path can be the only copy of its content.
 
 - Link leaf files only. A linked folder gives this repository each file that a tool writes there. For example, a linked `~/.claude` publishes sessions and credentials.
-- `bin/install.js` changes the computer outside this repository, with `go install` and `setx`, and has no automated test. Run it only when the user asks.
+- `bin/install.js` changes the computer outside this repository, with `go install`, and has no automated test. Run it only when the user asks.
 
 Done when: each `fs` write call in `bin/` is a `mkdirSync` or a `symlinkSync`, each `test/*.test.js` passes, and `node bin/status.js` reports each managed file as linked.
