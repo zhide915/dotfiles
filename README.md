@@ -14,7 +14,13 @@ The `home/` directory is the home tree: each file in it is a managed file, linke
    node bin/install.js
    ```
 
-The script changes only what needs to change, so you can run it again at any time.
+1. On Windows, run the following command in PowerShell, so that PowerShell loads the managed file `~/.config/powershell/profile.ps1`:
+
+   ```powershell
+   if (!(Test-Path $PROFILE.CurrentUserAllHosts)) { New-Item -ItemType File -Force -Path $PROFILE.CurrentUserAllHosts -Value '. "$HOME\.config\powershell\profile.ps1"' }
+   ```
+
+The `install` script changes only what needs to change, so you can run it again at any time.
 
 ## Use
 
